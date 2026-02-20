@@ -1,5 +1,5 @@
 [build]
-  command = "npm run build"
+  command = "pnpm build"
   publish = "dist/public"
 
 [context.production.environment]
@@ -10,7 +10,6 @@
   # OAUTH_CLIENT_SECRET = "your-client-secret"
 
 [build.environment]
-  # Ensure Netlify installs deps with the same package manager you used locally
-  # Uncomment to force pnpm if you prefer:
-  # NETLIFY_USE_YARN = "false"
-  # NPM_FLAGS = "--silent"
+  # Use pnpm instead of npm for dependency installation
+  PNPM_VERSION = "10.4.1"
+  NODE_VERSION = "20"
