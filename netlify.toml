@@ -1,0 +1,16 @@
+[build]
+  command = "npm run build"
+  publish = "dist/public"
+
+[context.production.environment]
+  NODE_ENV = "production"
+  # Add these in Netlify UI to wire your real OAuth credentials
+  # OAUTH_SERVER_URL = "https://your-oauth-server"
+  # OAUTH_CLIENT_ID = "your-client-id"
+  # OAUTH_CLIENT_SECRET = "your-client-secret"
+
+[build.environment]
+  # Ensure Netlify installs deps with the same package manager you used locally
+  # Uncomment to force pnpm if you prefer:
+  # NETLIFY_USE_YARN = "false"
+  # NPM_FLAGS = "--silent"
